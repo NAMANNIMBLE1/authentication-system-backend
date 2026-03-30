@@ -90,8 +90,8 @@ async function register(req: Request, res: Response) {
 
     res.cookie("refreshToken", RefreshToken, {
         httpOnly: true,
-        secure: false,      // 🔴 MUST be false on localhost
-        sameSite: "lax",    // better for dev
+        secure: false,      
+        sameSite: "lax",    
         maxAge: 7 * 24 * 60 * 60 * 1000
     });
 
